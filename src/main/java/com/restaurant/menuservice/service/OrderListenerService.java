@@ -8,6 +8,7 @@ public class OrderListenerService {
 
     @RabbitListener(queues = "order_queue")
     public void handleOrder(Object order){
+
         System.out.println(order);
     }
 }
