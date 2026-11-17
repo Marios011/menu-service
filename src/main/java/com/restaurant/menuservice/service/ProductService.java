@@ -17,6 +17,10 @@ public class ProductService{
         return productRepository.findAll();
     }
 
+    public String getCategoryName(Product product){
+        return product.getCategory();
+    }
+
 
     public Product findById(long id){
         return productRepository.findById(id).orElse(null);

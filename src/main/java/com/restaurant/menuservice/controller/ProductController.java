@@ -26,6 +26,12 @@ public class ProductController {
     }
 
 
+    @GetMapping("/{id}/category")
+    public String getCategoryName(@PathVariable long id){
+        return productService.getCategoryName(productService.findById(id));
+    }
+
+
     @PostMapping("/api/products")
     public Product addProduct(@RequestBody Product product){
         return productService.save(product);

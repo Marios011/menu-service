@@ -22,5 +22,8 @@ public class Product {
 
     private String category;
 
-    private Boolean isAvailable;
+}
+
+public String getCategory(){
+    return this.category;
 }
